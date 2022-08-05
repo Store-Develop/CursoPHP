@@ -1,27 +1,20 @@
 <?php
-//Variables SCOPE
+//Variables globales
+//Variable GlobalS
+/*$n1 = 6;
+$n2 = 4;
 
-//Forma 1.
-/*function estudiantes (){
-    $nombres = 'Juan'; 
-    return $nombres;
+function sumar()
+{
+    $GLOBALS['s'] = $GLOBALS['n1'] + $GLOBALS['n2'];
 }
-echo estudiantes();*/
+sumar();
+echo $s;*/
 
-//Forma 2.
-/*function estudiantes (){
-    $nombres = 'Andres'; 
-    echo $nombres;
-}
-estudiantes();*/
+//Variable _SERVER
+//echo $_SERVER['PHP_SELF'];
 
-//Forma 3.
-$edad = 24;
-function estudiantes (){
-    global $edad; 
-    $edad = 25; //toma prioridad la variable mas interna de la función y se impreme.
-    echo $edad;
-}
-estudiantes();
+$numero = $_GET['numero'];
+echo "el numero es: ".$numero;
 
 ?>
