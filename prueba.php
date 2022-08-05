@@ -1,10 +1,8 @@
 <?php
-//Array multidimencional o Matrices.
-$matriz = array(
-    array(1,2,3,4,5),
-    array(6,7,8,9,10),
-    array(11,12,13,14,15)
-);
+//Ciclo foreach en php foreach(nombreArreglo as nombreClave => nombreValor).
+$futbol = array('barcelona' => 'messi', 'juventus' => 'cuadrado', 'realMadrid' => 'elBicho', 'tottenham' => 'kane');
 
-echo $matriz[2][1];
+foreach ($futbol as $dato => $valor) {
+    echo $dato.': '.$valor.'; <br>';
+}
 ?> 
