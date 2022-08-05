@@ -1,45 +1,18 @@
 <?php
-// Ejercicios con array.
-
-$cursos = array('python<br>', 'java<br>', 'php<br>', 'html<br>', 'css<br>' );
-echo $cursos[3];
-// eliminar o reemplazar valores en un arreglo por medio del indice o posición.
-$cursos[3] = 'javascript<br>';
-//Añadir valor a un arreglo por posición.
-$cursos[5] = 'php<br>';
-//Imprimir los valores de un arreglo.
-print_r($cursos);
-echo count($cursos);
-
-//Otra forma de general un arreglo.
-$meses[0] = 'Enero';
-$meses[1] = 'Febrero';
-$meses[2] = 'Marzo';
-$meses[3] = 'Abril';
-$meses[4] = 'Mayo';
-$meses[5] = 'Junio';
-$meses[6] = 'Julio';
-$meses[7] = 'Agosto';
-$meses[8] = 'Septiembre';
-$meses[9] = 'Octubre';
-$meses[10] = 'Noviembre';
-$meses[11] = 'Diciembre';
-echo '<br>Cantidad de elementos en el Array: ' .count($meses);
-for ($i=0; $i <count($meses); $i++) { 
-    //echo $meses[$i];
-    if ($meses[$i] == 'Agosto') {
-        echo '<br>Mes de victoria Trabajo como Desarrollador Web.';
-    }
-}
- //Recorriendo arreglo e imprimiendo el ante penultimo valor.
- $panas = array('andres','jesus','julian','johan','bryam','pinena','felipe','jose','yirmer' );
- $panas[9] = 'lorena';
- $posicion = count($panas) -2;
- //echo $amigos[$posicion];
- //rsort(nombre del arreglo); Invierte una lista y muestra el ultimo valor de primera y el prilero de ultimo.
- // arsort(nombre del arreglo) mantiene el indice que le corresponde por defect a cada valor desde el inicio.
- //sin importar a donde se mueva el valor dentro del mismo Array.
- asort($panas);
- print_r($panas);
-
+// Funciones con Array.
+$panas = array('andres','jesus','julian','johan','bryam','pinena','felipe','jose','yirmer' );
+$compañeros = array('fabian<br>','sebastian<br>','alejandra<br>' );
+//Dividir un array en las diviciones que quieres con Array_chunk(nombre arreglo)
+//$funcion = array_chunk($panas, 5);
+//Eliminar posiciones de un arreglo apartir de la posición indicada con Array_slice(nombre del arreglo) Eliminar elementos de manera masiva;
+//$funcion = array_slice($panas, 5);
+//Unir dos Arrays en uno solo con Array_merge(nombre delarreglo, nombre del arreglo dos.)
+//$funcion = array_merge($panas, $compañeros);
+//Función para eliminar el ultimo elemento de un array Array_pop(nombre del array).
+//array_pop($panas);
+//Buscar dentro de un Array un elemento en especifico con array_search('PARAMETRO A BUSCAR', $nombre del arreglo).
+//$buscar = array_search('johan', $panas);
+//Función para invertir un arreglo con Array_reverse(nombre del arreglo).
+$revez = array_reverse($panas);
+print_r($revez);
 ?> 
