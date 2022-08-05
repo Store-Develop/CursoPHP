@@ -1,15 +1,27 @@
 <?php
-//Funciones en php.
-function estudiante($nombre, $apellido, $edad, $escuela){
-    echo "nuevo estudiante: $nombre $apellido Edad: $edad Escuela: $escuela";
-    
-}
-estudiante('Juan', 'perez', 24, 'Politecnico Internacional');
+//Variables SCOPE
 
-function suma($operandoA, $operandoB){
-    return $operandoA + $operandoB;
+//Forma 1.
+/*function estudiantes (){
+    $nombres = 'Juan'; 
+    return $nombres;
 }
+echo estudiantes();*/
 
-$resultado = suma(45, 50);
-echo "El resultado de su suma es: $resultado.";
-?> 
+//Forma 2.
+/*function estudiantes (){
+    $nombres = 'Andres'; 
+    echo $nombres;
+}
+estudiantes();*/
+
+//Forma 3.
+$edad = 24;
+function estudiantes (){
+    global $edad; 
+    $edad = 25; //toma prioridad la variable mas interna de la función y se impreme.
+    echo $edad;
+}
+estudiantes();
+
+?>
